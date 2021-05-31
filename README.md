@@ -40,6 +40,9 @@ python3 -m venv .venv && source .venv/bin/activate
 python3 -m pip install -r dev-requirements.txt
 ```
 
+Sometimes one might stumble upon an error related to Python Wheel lib when running the `pip install ...` command above.  
+Run `pip install wheel` in project folder and run the `pip install...` command again.
+
 To **run** the app:
 ```bash
 inventory_report param1 param2
