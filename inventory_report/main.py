@@ -5,7 +5,7 @@ from inventory_report.importer.json_importer import JsonImporter
 from inventory_report.importer.xml_importer import XmlImporter
 
 
-importer = {
+importer_lib = {
     "csv": CsvImporter,
     "json": JsonImporter,
     "xml": XmlImporter
@@ -24,7 +24,7 @@ def main():
     if validate_args(arguments):
         _, file_path, report_type = arguments
         file_type = file_path.split('.')[-1]
-        instance = InventoryRefactor(importer[file_type])
+        instance = InventoryRefactor(importer_lib[file_type])
         report = instance.import_data(file_path, report_type)
         print(report, end="")
 

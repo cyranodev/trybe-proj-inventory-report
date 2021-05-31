@@ -1,22 +1,16 @@
+from inventory_report.main import importer_lib
 from inventory_report.reports.complete_report import CompleteReport
 from inventory_report.reports.simple_report import SimpleReport
-from inventory_report.importer.csv_importer import CsvImporter
-from inventory_report.importer.json_importer import JsonImporter
-from inventory_report.importer.xml_importer import XmlImporter
 
 
 class Inventory:
     @staticmethod
     def _call_importer(file_path):
         extension = file_path.split('.')[-1]
-        if extension == 'csv':
-            return CsvImporter.import_data(file_path)
-        elif extension == 'json':
-            return JsonImporter.import_data(file_path)
-        elif extension == 'xml':
-            return XmlImporter.import_data(file_path)
-        else:
-            return None
+        try:
+            return importer_lib[extension].import_data(file_path)
+        except Exception:
+            raise ValueError('formato de arquivo inválido')
 
     @staticmethod
     def _generate_report(content_list, report_type):

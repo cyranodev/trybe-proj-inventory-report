@@ -20,6 +20,7 @@ class InventoryRefactor(Iterable):
             return SimpleReport.generate(content_list)
         elif report_type == "completo":
             return CompleteReport.generate(content_list)
+        return None
 
     def import_data(self, file_path, report_type):
         new_content = self.importer.import_data(file_path)

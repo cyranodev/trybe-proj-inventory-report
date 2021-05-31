@@ -34,5 +34,5 @@ class ReportsUtils:
     @classmethod
     def get_largest_stock(cls, content_list):
         _companies_list = cls.get_stock(content_list)
-        most_common = _companies_list.most_common()[0][0]
+        most_common = _companies_list.most_common(1)[0][0]
         return str(most_common)
