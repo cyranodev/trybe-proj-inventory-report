@@ -10,7 +10,7 @@
 
 **Stock report** is a small app to read CSV, JSON or XML files, providing console reports and Iterable instances. 🐍
 
-This project covers Python and intro to Object Oriented Programming, and taps into previous *design patterns* classes by using _Iterable_ and _Strategy_.
+This project covers Python, intro to Object Oriented Programming and *design patterns* (it uses _Iterable_ and _Strategy_).
 
 
 Project's filenames and architecture are defined by the project and must be unchanged to pass the course tests.
