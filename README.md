@@ -51,7 +51,7 @@ inventory_report param1 param2
 
 To run **tests** (within project folder):
 ```bash
-$ python3 -m pytest
+python3 -m pytest
 ```
 
 ##### [back to top](#top)
