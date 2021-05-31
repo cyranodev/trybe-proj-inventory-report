@@ -10,7 +10,7 @@
 
 **Stock report** is a small app to read CSV, JSON or XML files, providing console reports and Iterable instances. 🐍
 
-This project covers Python, intro to Object Oriented Programming and *design patterns* (it uses _Iterable_ and _Strategy_).
+This project covers **Python**, intro to **Object Oriented Programming** and **design patterns** (using _Iterable_ and _Strategy_).
 
 
 Project's filenames and architecture are defined by the project and must be unchanged to pass the course tests.
@@ -44,7 +44,7 @@ To **run** the app:
 ```bash
 inventory_report param1 param2
 ```
-(where _param1_ is the file path and _param2_ is the type of report: 'simples' or 'completo' (in Portuguese, 'simple' or 'complete'))
+##### (where _param1_ is the file path and _param2_ is the type of report: `'simples'` or `'completo'` (meaning 'simple' or 'complete')
 
 To run **tests** (within project folder):
 ```bash
