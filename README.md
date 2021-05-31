@@ -8,22 +8,22 @@
 
 ## Requisites <a name="requisites"></a>
 
-The block enclosed by this project covers Python and data scraping. **Tech News** is a simple app that fetches news from a Brazilian tech website ([TechMundo](https://www.tecmundo.com.br)) and scrapes titles, urls and first paragraphs of its latest news. 🤖
+**Stock report** is a small app to read CSV, JSON or XML files, providing console reports and Iterable instances. 🐍
 
-The project's filenames and architecture are defined by the project and must be unchanged to pass the course tests.
+This project covers Python and intro to Object Oriented Programming, and taps into previous *design patterns* classes by using _Iterable_ and _Strategy_.
+
+
+Project's filenames and architecture are defined by the project and must be unchanged to pass the course tests.
 
 Original requirements and instructions (in Portuguese) for the project are [**here**](README_original.md).
 
 
 **Requisites sum-up:**
 
-- Create functions step-by-step to:
-  - fetch data
-  - scrape and store contents using MongoDB
-- Develop features to:
-  - search fetched news by title, date, category and news source
-  - Analyze stored news to bring the top 5 most popular news and the top 5 categories
-- Create a script to run the app from the terminal
+- Create console report methods and classes
+- Create file importer and reader classes
+- Refat Report class to become an Iterable
+- Create method to receive arguments from terminal command and run the app.
 
 ##### [back to top](#top)
 
@@ -42,15 +42,14 @@ python3 -m pip install -r dev-requirements.txt
 
 To **run** the app:
 ```bash
-tech-news-analyzer
+inventory_report param1 param2
 ```
+(where _param1_ is the file path and _param2_ is the type of report: 'simples' or 'completo' (in Portuguese, 'simple' or 'complete'))
 
 To run **tests** (within project folder):
 ```bash
 $ python3 -m pytest
 ```
-
-#### Important: mongoDB services must be installed and active in your machine.
 
 ##### [back to top](#top)
 
